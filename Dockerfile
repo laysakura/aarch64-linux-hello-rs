@@ -21,7 +21,8 @@ RUN apt-get update \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 
-# Add Rust's cross compilation target for arm64
-RUN rustup target add aarch64-unknown-linux-gnu
+# Add Rust's cross compilation target for arm64 and set it to default
+RUN rustup target add aarch64-unknown-linux-gnu \
+    & rustup override set 1.41.1-aarch64-unknown-linux-gnu
 
 CMD ["bash"]
