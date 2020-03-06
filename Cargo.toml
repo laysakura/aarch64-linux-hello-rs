@@ -1,0 +1,6 @@
+[package]
+name = "aarch64-linux-hello-rs"
+version = "0.1.0"
+authors = ["Sho Nakatani <lay.sakura@gmail.com>"]
+
+[dependencies]
